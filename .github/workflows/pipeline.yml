@@ -92,7 +92,20 @@ jobs:
           name: dist
           path: dist
 
-      - name: Run Tests e2e
-        run: npm run test:e2e
+      - name: Run Tests E2E
+        uses: cypress-io/github-action@v6
+        with:
+          
+          # 1. Comando para levantar tu servidor local en segundo planoo
+          start: npm run start:test:ci
+          
+          # 2. Espera a que el puerto 8080 responda antes de abrir Cypress
+          wait-on: 'http://localhost:4173' 
+          
+          # 3. Tiempo límite para que el servidor responda (en segundos)
+          wait-on-timeout: 300
+          
+          # 4. Ejecuta las pruebas E2E en modo headless
+          command: npm run test:e2e
       
       
