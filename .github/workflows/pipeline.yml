@@ -31,6 +31,9 @@ jobs:
           name: dist
           path: dist
 
+      - name: Lint code
+        run: npm run lint
+
 
       
       
