@@ -49,6 +49,7 @@ jobs:
           path: dist
 
   test:
+    needs: [lint,build]
     runs-on: ubuntu-latest
     steps:
       
