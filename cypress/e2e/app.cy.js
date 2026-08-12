@@ -2,7 +2,7 @@ describe("Test e2e", () => {
 
      beforeEach(() => {
        // Visita la página de inicio configurada en baseUrl
-       cy.visit("http://localhost:5173/");
+       cy.visit("http://localhost:4173/");
      });
 
 
