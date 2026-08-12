@@ -99,8 +99,8 @@ jobs:
           # 1. Comando para levantar tu servidor local en segundo planoo
           start: npm run start:test:ci
           
-          # 2. Espera a que el puerto 4173 responda antes de abrir Cypress
-          wait-on: 'http://localhost:4173' 
+          # 2. Espera a que el puerto 5173 responda antes de abrir Cypress
+          wait-on: 'http://localhost:5173' 
           
           # 3. Tiempo límite para que el servidor responda (en segundos)
           wait-on-timeout: 300
